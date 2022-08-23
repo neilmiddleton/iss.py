@@ -29,11 +29,11 @@ def duration_to_string(s):
 lat, long = current_lat_lng()
 passes = pass_times(lat, long)
 
-print "Our latitude is " + str(lat)
-print "Our longitude is " + str(long)
-print "Pass times:"
+print ("Our latitude is " + str(lat))
+print ("Our longitude is " + str(long))
+print ("Pass times:")
 
 for iss_pass in passes:
   localtime = time.strftime('%H:%M:%S %Y-%m-%d',time.localtime(iss_pass['risetime']))
   duration = duration_to_string(iss_pass['duration'])
-  print 'ISS will pass at {0} and will be visible for {1}'.format(localtime, duration)
+  print ('ISS will pass at {0} and will be visible for {1}'.format(localtime, duration))
